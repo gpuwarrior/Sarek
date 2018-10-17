@@ -14,5 +14,7 @@ Bootstrap:docker
     environment.yml /
 
 %post
+    mkdir -p /ufrc /orange /bio /rlts /scratch
+    mkdir -p /scratch/local
     /opt/conda/bin/conda env create -f /environment.yml
     /opt/conda/bin/conda clean -a
